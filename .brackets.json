@@ -1,0 +1,17 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/david/IONIC/myApp2/platforms/ios/build/emulator/myApp2.app/www/lib/ionic/js/angular-ui/angular-ui-router.min.js",
+        "/Users/david/IONIC/myApp2/plugins/com.ionic.keyboard/src/blackberry10/index.js",
+        "/Users/david/IONIC/myApp2/plugins/com.ionic.keyboard/www/keyboard.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.console/www/console-via-logger.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.console/www/logger.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/blackberry10/index.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/browser/DeviceProxy.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/firefoxos/DeviceProxy.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/tizen/DeviceProxy.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/ubuntu/device.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/windows/DeviceProxy.js",
+        "/Users/david/IONIC/myApp2/plugins/org.apache.cordova.device/src/windows8/DeviceProxy.js",
+        "/Users/david/IONIC/myApp2/www/js/controllers.js"
+    ]
+}
