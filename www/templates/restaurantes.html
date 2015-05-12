@@ -3,7 +3,7 @@
       <ion-refresher pulling-text="Actualizando... " on-refresh="doRefresh()">
       </ion-refresher>
     <ion-list>
-      <ion-item ng-repeat="restaurante in restaurantes" href="#/app/restaurantes/{{restaurante.nombre}}">
+      <ion-item ng-repeat="restaurante in restaurantes" href="#/app/restaurantes/{{restaurante.idRestaurante}}">
           <div class="item item-thumbnail-left">
               <img ng-src="{{restaurante.imagen}}">
               <h2>{{restaurante.nombre}}</h2>

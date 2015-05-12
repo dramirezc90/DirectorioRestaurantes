@@ -47,25 +47,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
   .state('app.restaurantes', {
       url: "/restaurantes",
       views: {
         'menuContent': {
           templateUrl: "templates/restaurantes.html",
-          controller: 'PlayListCtrl'
+          controller: 'RestaurantCtrl'
         }
       }
     })
 
+  .state('app.mapa', {
+      url: "/mapa",
+      views: {
+        'menuContent': {
+            templateUrl: "templates/map.html",
+            controller: 'MapCtrl'
+        }
+      }
+  })
+
   .state('app.single', {
-    url: "/restaurantes/:playlistId",
+    url: "/restaurantes/:restaurantId",
     views: {
       'menuContent': {
         templateUrl: "templates/restaurante.html",
-        controller: 'PlayListCtrl'
+        controller: 'RestCtrl'
       }
     }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/restaurantes');
 });

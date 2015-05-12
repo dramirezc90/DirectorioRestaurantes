@@ -1,5 +1,26 @@
-<ion-view view-title="Playlist">
+<ion-view view-title="{{restaurante.nombre}}">
   <ion-content>
-    <h1>Detalle Restaurante</h1>
+      <!--<h2>{{restaurante.nombre}}</h2>-->
+      <div class="list card">
+          <div class="item item-avatar">
+              <img ng-src="{{restaurante.imagen}}">
+              <h2>{{restaurante.nombre}}</h2>
+              <p>{{restaurante.direccion}}</p>
+          </div>
+
+          <div class="item item-body">
+              <img ng-src="{{restaurante.imagen}}"><br>
+              <a href="#" class="subdued">{{restaurante.especialidad}}</a>
+              <p>
+                  Este es el espacio dedicado para la descripcion del restaurante
+                  donde el cliente podra generar el contenido basico
+                  que resaltara el restaurante.
+              </p>
+              <a href="#" class="subdued">Popularidad 5</a><br>
+          </div>
+
+      </div>
+
+
   </ion-content>
 </ion-view>
