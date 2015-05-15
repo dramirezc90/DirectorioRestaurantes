@@ -124,11 +124,11 @@ angular.module('starter.controllers', [])
 .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
 
     function initialize() {
-        var myLatLng = new google.maps.LatLng(43.07493, -89.381388);
+        var myLatLng = new google.maps.LatLng(4.116924, -73.650415);
 
         var mapOptions = {
             center: myLatLng,
-            zoom: 16,
+            zoom: 17,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
@@ -141,6 +141,8 @@ angular.module('starter.controllers', [])
             content: compiled[0]
         });
 
+
+        // CARGAR LOS RESTAURANTES
         var marker = new google.maps.Marker({
             position : myLatLng,
             map: map,
@@ -168,7 +170,8 @@ angular.module('starter.controllers', [])
 
         navigator.geolocation.getCurrentPosition(function(pos) {
             $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-            $scope.loading.hide();
+            $ionicLoading.hide();
+            //$scope.loading.hide();
         }, function(error) {
             alert('No se pudo obtener ubicacion: '+error.message);
         });
@@ -179,5 +182,6 @@ angular.module('starter.controllers', [])
         alert('Ejemplo de info window con ng-click')
     };
 
+    $scope.centerOnMe();
+
 });
-<!--Cambio->
