@@ -1,0 +1,19 @@
+<ion-view view-title="Restaurantes">
+    <ion-content>
+        <ion-refresher pulling-text="Actualizando... " on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="restaurante in restaurantes | filter: busqueda" href="#/app/restaurantes/{{restaurante.idRestaurante}}">
+                <div class="item item-thumbnail-left">
+                    <img ng-src="{{restaurante.imagen}}">
+                    <h2>{{restaurante.nombre}}</h2>
+                    <p>{{restaurante.direccion}}</p>
+                    <p>{{restaurante.dia}}</p>
+                    <p>{{restaurante.horaInicio}}</p>
+                    <p>{{restaurante.horaFin}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<!--Cambio->

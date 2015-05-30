@@ -354,16 +354,6 @@ angular.module('starter.controllers', [])
                 '</div>'+
                 '</div>';
 
-
-            //google.maps.event.addListener(marker, 'click', function() {
-            //    infoWindow.setContent(contentString2);
-            //    infoWindow.open($scope.map, marker);
-            //});
-
-
-            //google.maps.event.addListener(marker, 'click', function() {
-            //    infoWindow.open($scope.map, marker);
-            //});
             attachWindow(marker, contentString2);
 
         };
