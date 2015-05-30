@@ -1,13 +1,12 @@
 <ion-view view-title="{{restaurante.nombre}}">
   <ion-content>
-      <!--<h2>{{restaurante.nombre}}</h2>-->
+      <!-- CUERPO DE LA DESCRIPCION PRINCIPAL -->
       <div class="list card">
           <div class="item item-avatar">
               <img ng-src="{{restaurante.imagen}}">
               <h2>{{restaurante.nombre}}</h2>
               <p>{{restaurante.direccion}}</p>
           </div>
-
           <div class="item item-body">
               <img class="full-image" ng-src="{{restaurante.imagen}}"><br>
               <a href="#" class="subdued">{{restaurante.especialidad}}</a>
@@ -16,8 +15,71 @@
                   donde el cliente podra generar el contenido basico
                   que resaltara el restaurante.
               </p>
-              <a href="#" class="subdued">Popularidad 5</a><br>
+              <a href="#" class="subdued">Popularidad</a>
+              <a class="pull-right balanced">{{restaurante.calificacion}}</a><br>
           </div>
+      </div>
+
+      <!-- COMIDAS OFRECIDAS POR EL RESTAURANTE -->
+      <div>
+          <h4 class=" padding-left text-center subdued">Nuestras Especialidades</h4>
+          <ion-list>
+              <ion-item ng-repeat="comida in categComidas" href="#">
+                  <h2 class="text-center padding-left subdued">{{comida.categoria}}</h2>
+              </ion-item>
+          </ion-list>
+      </div>
+        </br>
+      <!-- COMENTARIOS DE LOS DISTINTOS USUARIOS -->
+      <div>
+          <h4 class=" padding-left text-center subdued">Comentarios</h4>
+          <ion-list>
+              <ion-item ng-repeat="comentario in comentarios" href="#">
+                  <div class="item item-body">
+                      <div class="row">
+                          <div class="col col-75">
+                              <h2 class="simple">{{comentario.nombre}}</h2></br>
+                              <p class="simple">{{comentario.fecha | date:'medium'}}</p>
+                          </div>
+                          <div class="col col-25">
+                              <p class="simple">{{comentario.calificacion}}</p>
+                          </div>
+                      </div>
+                      <!--<h2 class="simple">{{comentario.nombre}}</h2>-->
+                      <!--<p class="simple">{{comentario.fecha | date:'medium'}}</p>-->
+                      <!--<p class="simple">{{comentario.calificacion}}</p>-->
+                      <div class="row">
+                          <div class="col">
+                              <p class="simple">
+                                  {{comentario.texto}}
+                              </p>
+                          </div>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item>
+                  <form ng-submit="submit()">
+                      <div class="list">
+                          <label class="item item-input item-floating-label">
+                              <span class="input-label">Correo</span>
+                              <input type="email" ng-model="com.corr" placeholder="Correo" id="correo" required>
+                          </label>
+                          <label class="item item-input item-floating-label">
+                              <span class="input-label">Calificacion</span>
+                              <input type="number" ng-model="com.cal" placeholder="Calificacion" id="calif" required>
+                          </label>
+                          <label class="item item-input item-floating-label">
+                              <span class="input-label">Comentario</span>
+                              <textarea type="text" ng-model="com.comm" placeholder="Comentario" id="coment" required></textarea>
+                          </label>
+                          <div class="padding">
+                              <input  ng-click="submit()" id="submit" value="submit" class="button button-block button-energized">
+                          </div>
+                      </div>
+                  </form>
+              </ion-item>
+          </ion-list>
 
       </div>
 

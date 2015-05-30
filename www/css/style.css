@@ -7,3 +7,20 @@
 .scroll {
     height: 100%;
 }
+
+.background, .background .pane,  {
+    background-color: #999999;
+}
+
+.item-complex .item-content {
+    padding-right: 16px !important;
+}
+
+.simple {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.row, .col {
+    padding: 0px !important;
+}
